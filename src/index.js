@@ -10,7 +10,6 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import createSagaMiddleware from 'redux-saga';
-import mySaga from './sagas';
 import { helloSaga } from './sagas/index';
 
 

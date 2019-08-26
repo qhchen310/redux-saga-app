@@ -16,7 +16,7 @@ class App extends Component {
           <p className='App-intro'>
             {this.props.counter}
           </p>
-          <p className='App-increment' onClick={this.props.increment} >click</p>
+          <p className='App-increment' onClick={this.props.incrementFunc} >click</p>
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -37,8 +37,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = {
-  increment
+const mapDispatchToProps = (dispatch) => {
+  return {
+    incrementFunc: () => dispatch(increment())
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

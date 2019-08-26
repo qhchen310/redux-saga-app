@@ -1,0 +1,27 @@
+body {
+    background: rgb(237, 240, 244);
+}
+
+header {
+    z-index: 1030;
+    position: fixed;
+    height: 54px;
+    width: 100%;
+    background: white;
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+#nav-bar_left {
+    display: flex;
+    padding-left: 280px;
+}
+
+#nav-bar_right {
+    display: flex;
+    padding-right: 280px;
+}
+
+#nav-bar_right p {
+    padding-left: 50px;
+}
