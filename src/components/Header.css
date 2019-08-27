@@ -8,7 +8,35 @@ header {
     display: inline-flex;
 }
 
-.loginBtn{
+#headerRoot p {
+    background: white;
+    color: black;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#headerRoot a {
+    color: black;
+    text-decoration: none;
+}
+
+#headerRoot a:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+#nav-bar_left {
+    display: flex;
+    padding-left: 10%;
+}
+
+#nav-bar_right {
+    display: flex;
+    padding-right: 10%;
+}
+
+.loginBtn {
     margin: 10px;
     width: 100px;
     background: #00C5CD;
@@ -17,21 +45,7 @@ header {
     border-radius: 15px;
 }
 
-.loginBtn:hover{
+.loginBtn:hover {
     opacity: 0.7;
     cursor: pointer;
-}
-
-#nav-bar_left {
-    display: flex;
-    padding-left: 280px;
-}
-
-#nav-bar_right {
-    display: flex;
-    padding-right: 280px;
-}
-
-#nav-bar_right p {
-    padding-left: 50px;
 }
