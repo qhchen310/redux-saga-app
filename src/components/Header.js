@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import './Header.css';
 import { connect } from 'react-redux';
-import actions from '../actions/user'
-
+import actions from '../actions/user';
+import { BrowserRouter, Link } from 'react-router-dom'
 
 class Header extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.user = {};
     }
 
-    componentDidMount(){
-        
+    componentDidMount() {
+
     }
 
     render() {
-        const { isAuthenticated,userLogin } = this.props;
+        const { isAuthenticated, userLogin } = this.props;
         return (
             <header id="headerRoot">
                 <div id='nav-bar_left'>
@@ -27,25 +27,27 @@ class Header extends Component {
                         !isAuthenticated &&
                         <button className='loginBtn'>login</button>
                     }
-                    <p><a href='javascript:void(0)'>content</a></p>
-                    <p><a href='javascript:void(0)'>test</a></p>
-                    <p><a href='javascript:void(0)'>test1</a></p>
+                    <BrowserRouter>
+                        <p><Link to='/Login'>content</Link></p>
+                        <p><a href='javascript:void(0)'>test</a></p>
+                        <p><a href='javascript:void(0)'>test1</a></p>
+                    </BrowserRouter>
                 </div>
             </header>
         );
     }
 }
 
-const mapStateToProps = (state)=>{
+const mapStateToProps = (state) => {
     return {
-        isAuthenticated:state.user.isAuthenticated
+        isAuthenticated: state.user.isAuthenticated
     }
 }
 
-const mapDispatchToProps = (dispatch)=>{
+const mapDispatchToProps = (dispatch) => {
     return {
         userLogin: () => dispatch(actions.fetch.login)
     }
 }
 
-export default connect(mapStateToProps,{mapDispatchToProps})(Header);
+export default connect(mapStateToProps, { mapDispatchToProps })(Header);
