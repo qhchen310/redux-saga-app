@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Header.css';
 import { connect } from 'react-redux';
 import actions from '../actions/user';
-import { BrowserRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
 
@@ -27,11 +27,9 @@ class Header extends Component {
                         !isAuthenticated &&
                         <button className='loginBtn'>login</button>
                     }
-                    <BrowserRouter>
-                        <p><Link to='/Login'>content</Link></p>
-                        <p><a href='javascript:void(0)'>test</a></p>
-                        <p><a href='javascript:void(0)'>test1</a></p>
-                    </BrowserRouter>
+                    <p><Link to='/Sign'>content</Link></p>
+                    <p><Link to='/'>test</Link></p>
+                    <p><a href='javascript:void(0)'>test1</a></p>
                 </div>
             </header>
         );
